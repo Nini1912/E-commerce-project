@@ -36,6 +36,10 @@ body {
   border-radius: 0.625rem;
 }
 
+.product-thumbnail:hover {
+  opacity: 0.5;
+}
+
 .company-name {
   text-transform: uppercase;
   font-size: 1rem;
@@ -60,7 +64,7 @@ body {
 }
 
 .rate-span {
-   border-top-right-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
   border-bottom-right-radius: 0.7rem;
   background-color: var(--btn-bg);
 }
@@ -116,5 +120,5 @@ body {
 }
 
 .cart-icon {
-  fill: #fff;
+  filter: invert(1)
 }

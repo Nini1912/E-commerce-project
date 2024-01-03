@@ -2,7 +2,7 @@ import { Col } from "react-bootstrap";
 import Star from "./star";
 import Plus from "../assets/icon-plus.svg";
 import Minus from "../assets/icon-minus.svg";
-import Cart from "../assets/icon-cart.svg";
+import Cart from "./Cart";
 
 const ProductDescription = () => {
   return (
@@ -36,7 +36,8 @@ const ProductDescription = () => {
           <img src={Plus} alt="" />
         </button>
         <button className="add-to-cart-btn px-5 py-3 border-0 rounded-4">
-          <img className="cart-icon me-2" src={Cart} alt="" /> Add to cart
+          <Cart fill="white" />
+          <span className="ms-3">Add to cart</span>
         </button>
       </div>
     </Col>
