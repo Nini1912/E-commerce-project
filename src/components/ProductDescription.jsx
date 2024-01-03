@@ -24,10 +24,10 @@ const ProductDescription = () => {
       </p>
       <div className="price-div mt-4">
         <h3 className="fw-bold me-3">$125.00</h3>
-        <p className="fw-bold px-2 rounded">50%</p>
+        <p className="fw-bold px-2 mt-2 rounded">50%</p>
       </div>
       <p className="old-price text-decoration-line-through">$250.00</p>
-      <div className="counter mt-5">
+      <div className="counter mt-3">
         <button className="count-btn minus pb-3 px-4 pt-2 border-0">
           <img src={Minus} alt="" />
         </button>
