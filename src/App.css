@@ -25,3 +25,13 @@ body {
 .nav-link:hover {
   border-bottom: 3px solid var(--orange);
 }
+
+.product-img {
+  border-radius: 0.9375rem;
+  width: 26.5rem;
+}
+
+.product-thumbnail {
+  width: 5.5rem;
+  border-radius: 0.625rem;
+}
