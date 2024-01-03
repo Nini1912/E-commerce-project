@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Kumbh+Sans&display=swap");
+:root {
+  --orange: #ff7e1b;
+  --pale-orange: #ffede0;
+  --grayish: #68707d;
+  --light-greyish: #b6bcc8;
+  --btn-bg: #f6f8fd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.profile-img {
+    border: 4px solid var(--orange);
+    border-radius: 50%;
+    width: 3.125rem;
+}
+
+.nav-link:hover {
+  border-bottom: 3px solid var(--orange);
+}
