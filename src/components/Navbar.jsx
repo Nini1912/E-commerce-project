@@ -3,7 +3,7 @@ import Logo from "../assets/logo.svg";
 import Cart from "../assets/icon-cart.svg";
 import { loggedInUser, assetsBaseUrl } from "../data";
 
-const NavBar = () => {
+const NavBar = ({ productsInCart }) => {
   return (
     <Navbar expand="lg">
       <Container className="border-bottom pt-3 pb-4 w-75">
@@ -30,7 +30,14 @@ const NavBar = () => {
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
-        <img src={Cart} alt="" className="me-5" />
+        <div className="cart me-5">
+          <img src={Cart} alt="" />
+          {productsInCart !== 0 && (
+            <span className="products-in-cart rounded-circle">
+              {productsInCart}
+            </span>
+          )}
+        </div>
         <img
           className="profile-img"
           src={`https://${assetsBaseUrl}/${loggedInUser.profileImage}`}

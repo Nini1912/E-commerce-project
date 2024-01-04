@@ -1,10 +1,8 @@
 import { Col } from "react-bootstrap";
 import Star from "./star";
-import Plus from "../assets/icon-plus.svg";
-import Minus from "../assets/icon-minus.svg";
-import Cart from "./Cart";
+import Counter from "./Counter";
 
-const ProductDescription = () => {
+const ProductDescription = ({ setProductsInCart }) => {
   return (
     <Col className="col-4 pt-5">
       <h3 className="company-name">Sneaker Company</h3>
@@ -27,19 +25,7 @@ const ProductDescription = () => {
         <p className="fw-bold px-2 mt-2 rounded">50%</p>
       </div>
       <p className="old-price text-decoration-line-through">$250.00</p>
-      <div className="counter mt-3">
-        <button className="count-btn minus pb-3 px-4 pt-2 border-0">
-          <img src={Minus} alt="" />
-        </button>
-        <span className="count fw-bold m-0 pt-2 pb-3 px-3">0</span>
-        <button className="count-btn plus pb-3 px-4 pt-2 me-3 border-0">
-          <img src={Plus} alt="" />
-        </button>
-        <button className="add-to-cart-btn px-5 py-3 border-0 rounded-4">
-          <Cart fill="white" />
-          <span className="ms-3">Add to cart</span>
-        </button>
-      </div>
+      <Counter setProductsInCart={setProductsInCart} />
     </Col>
   );
 };
