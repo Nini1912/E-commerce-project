@@ -2,7 +2,11 @@ import { Col } from "react-bootstrap";
 import Star from "./star";
 import Counter from "./Counter";
 
-const ProductDescription = ({ setProductsInCart }) => {
+const ProductDescription = ({
+  setProductsInCart,
+  productNumber,
+  setProductNumber,
+}) => {
   return (
     <Col className="col-4 pt-5">
       <h3 className="company-name">Sneaker Company</h3>
@@ -25,7 +29,11 @@ const ProductDescription = ({ setProductsInCart }) => {
         <p className="fw-bold px-2 mt-2 rounded">50%</p>
       </div>
       <p className="old-price text-decoration-line-through">$250.00</p>
-      <Counter setProductsInCart={setProductsInCart} />
+      <Counter
+        setProductsInCart={setProductsInCart}
+        productNumber={productNumber}
+        setProductNumber={setProductNumber}
+      />
     </Col>
   );
 };

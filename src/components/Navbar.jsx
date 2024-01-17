@@ -1,9 +1,19 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import Logo from "../assets/logo.svg";
 import Cart from "../assets/icon-cart.svg";
+import CartContainer from "./Cart-container";
 import { loggedInUser, assetsBaseUrl } from "../data";
 
-const NavBar = ({ productsInCart }) => {
+const NavBar = ({
+  productsInCart,
+  setCartIsClicked,
+  cartIsClicked,
+  setProductsInCart,
+  setProductNumber,
+}) => {
+  const openCart = () => {
+    setCartIsClicked(!cartIsClicked);
+  };
   return (
     <Navbar expand="lg">
       <Container className="border-bottom pt-3 pb-4 w-75">
@@ -31,12 +41,14 @@ const NavBar = ({ productsInCart }) => {
           </Nav>
         </Navbar.Collapse>
         <div className="cart me-5">
-          <img src={Cart} alt="" />
-          {productsInCart !== 0 && (
-            <span className="products-in-cart rounded-circle">
-              {productsInCart}
-            </span>
-          )}
+          <img className="cart-icon" src={Cart} alt="" onClick={openCart} />
+          <CartContainer
+            productsInCart={productsInCart}
+            cartIsClicked={cartIsClicked}
+            setCartIsClicked={setCartIsClicked}
+            setProductsInCart={setProductsInCart}
+            setProductNumber={setProductNumber}
+          />
         </div>
         <img
           className="profile-img"

@@ -8,14 +8,26 @@ import { useState } from "react";
 
 function App() {
   const [productsInCart, setProductsInCart] = useState(0);
+  const [cartIsClicked, setCartIsClicked] = useState(false);
+  const [productNumber, setProductNumber] = useState(0);
   return (
     <>
-      <NavBar productsInCart={productsInCart} />
+      <NavBar
+        productsInCart={productsInCart}
+        setProductsInCart={setProductsInCart}
+        cartIsClicked={cartIsClicked}
+        setCartIsClicked={setCartIsClicked}
+        setProductNumber={setProductNumber}
+      />
       <Container className="mt-5">
         <Row>
           <Col className="col-1 me-5"></Col>
           <ImageCarrousel />
-          <ProductDescription setProductsInCart={setProductsInCart} />
+          <ProductDescription
+            setProductsInCart={setProductsInCart}
+            productNumber={productNumber}
+            setProductNumber={setProductNumber}
+          />
         </Row>
       </Container>
     </>

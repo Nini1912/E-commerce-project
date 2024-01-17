@@ -1,11 +1,8 @@
 import Plus from "../assets/icon-plus.svg";
 import Minus from "../assets/icon-minus.svg";
 import Cart from "./Cart";
-import { useState } from "react";
 
-const Counter = ({ setProductsInCart }) => {
-  const [productNumber, setProductNumber] = useState(0);
-
+const Counter = ({ setProductsInCart, productNumber, setProductNumber }) => {
   const dicrease = () => {
     if (productNumber > 0) {
       setProductNumber(productNumber - 1);
