@@ -4,6 +4,7 @@ import { Col, Row, Container } from "react-bootstrap";
 import NavBar from "./components/Navbar";
 import ImageCarrousel from "./components/ImgCarrousel";
 import ProductDescription from "./components/productDescription";
+import Review from "./components/Review";
 import { useState } from "react";
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
         setCartIsClicked={setCartIsClicked}
         setProductNumber={setProductNumber}
       />
-      <Container className="mt-5">
+      <Container className="product-div mt-5">
         <Row>
           <Col className="col-1 me-5"></Col>
           <ImageCarrousel />
@@ -30,6 +31,7 @@ function App() {
           />
         </Row>
       </Container>
+      <Review />
     </>
   );
 }

@@ -15,7 +15,7 @@ const ProductDescription = ({
         <Star fill="#FAD409" stroke="#FAD409" />
         <Star fill="#FAD409" stroke="#FAD409" />
         <Star fill="#FAD409" stroke="#FAD409" />
-        <Star fill="none" stroke="currentColor" />
+        <Star fill="#FAD409" stroke="#FAD409" />
         <Star fill="none" stroke="currentColor" />
       </span>
       <span className="rate-span pt-2 pe-3 pb-3">4.2 out of 5</span>

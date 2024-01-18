@@ -30,6 +30,10 @@ body {
   border-bottom: 3px solid var(--orange);
 }
 
+.product-div {
+  margin-bottom: 6rem;
+}
+
 .product-img {
   border-radius: 0.9375rem;
   width: 26.5rem;
@@ -182,4 +186,10 @@ body {
 
 .checkout-btn:hover {
   background-color: var(--btn-hover);
+}
+
+.review-btn {
+  background-color: var(--orange);
+  color: white;
+  font-weight: 500;
 }
