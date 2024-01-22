@@ -60,7 +60,7 @@ const CartContainer = ({
                 </Col>
               </Row>
               <button
-                className="checkout-btn w-100 px-5 py-3 border-0 rounded-4 mt-4"
+                className="checkout-btn button w-100 px-5 py-3 border-0 rounded-4 mt-4"
                 onClick={() => {
                   setCartIsClicked(false);
                 }}

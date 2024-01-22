@@ -3,7 +3,10 @@ import { product } from "../data";
 import User from "../assets/user-placeholder.png";
 import Star from "./star";
 
-const Review = () => {
+const Review = ({ setWriteReviwBtnIsClicked }) => {
+  const newReview = () => {
+    setWriteReviwBtnIsClicked(true);
+  };
   return (
     <Container className="my-5 position-relative">
       <Row className="ms-5 ps-5">
@@ -11,7 +14,10 @@ const Review = () => {
           <h1 className="ms-5">Customers reviews</h1>
         </Col>
         <Col className="p-0">
-          <button className="review-btn px-5 py-3 border-0 rounded-4">
+          <button
+            className="button px-5 py-3 border-0 rounded-4"
+            onClick={newReview}
+          >
             Write a review
           </button>
         </Col>

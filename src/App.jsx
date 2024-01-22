@@ -5,12 +5,14 @@ import NavBar from "./components/Navbar";
 import ImageCarrousel from "./components/ImgCarrousel";
 import ProductDescription from "./components/productDescription";
 import Review from "./components/Review";
+import AddReview from "./components/AddReview";
 import { useState } from "react";
 
 function App() {
   const [productsInCart, setProductsInCart] = useState(0);
   const [cartIsClicked, setCartIsClicked] = useState(false);
   const [productNumber, setProductNumber] = useState(0);
+  const [writeReviwBtnIsClicked, setWriteReviwBtnIsClicked] = useState(false);
   return (
     <>
       <NavBar
@@ -31,7 +33,10 @@ function App() {
           />
         </Row>
       </Container>
-      <Review />
+      {!writeReviwBtnIsClicked && (
+        <Review setWriteReviwBtnIsClicked={setWriteReviwBtnIsClicked} />
+      )}
+      {writeReviwBtnIsClicked && <AddReview />}
     </>
   );
 }

@@ -125,11 +125,14 @@ body {
   font-size: 1.2rem;
 }
 
-.add-to-cart-btn {
+.button {
   background-color: var(--orange);
   color: white;
-  box-shadow: 0px 20px 50px -20px var(--orange);
   font-weight: 500;
+}
+
+.add-to-cart-btn {
+  box-shadow: 0px 20px 50px -20px var(--orange);
 }
 
 .add-to-cart-btn:hover {
@@ -178,18 +181,12 @@ body {
   margin-top: 4rem;
 }
 
-.checkout-btn {
-  background-color: var(--orange);
-  color: white;
-  font-weight: 500;
-}
-
 .checkout-btn:hover {
   background-color: var(--btn-hover);
 }
 
-.review-btn {
-  background-color: var(--orange);
+.cancel-btn {
+  background-color: #9c9c9c;
   color: white;
   font-weight: 500;
 }

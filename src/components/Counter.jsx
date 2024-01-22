@@ -33,7 +33,7 @@ const Counter = ({ setProductsInCart, productNumber, setProductNumber }) => {
         <img src={Plus} alt="" />
       </button>
       <button
-        className="add-to-cart-btn px-5 py-3 border-0 rounded-4"
+        className="add-to-cart-btn button px-5 py-3 border-0 rounded-4"
         onClick={addToCart}
       >
         <Cart fill="white" />
