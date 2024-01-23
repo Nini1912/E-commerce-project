@@ -8,6 +8,14 @@ import Review from "./components/Review";
 import AddReview from "./components/AddReview";
 import { useState } from "react";
 
+// nav hovers
+// texarea cols
+// submit edit and delete buttons
+// responsive layout
+// app.css shorten
+// review components stars
+// addReview component shorten
+
 function App() {
   const [productsInCart, setProductsInCart] = useState(0);
   const [cartIsClicked, setCartIsClicked] = useState(false);

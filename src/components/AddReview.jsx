@@ -1,32 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Star from "./star";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { string, object, number } from "yup";
-
-const formInitialValues = {
-  user: "",
-  starRating: 0,
-  writtenReview: "",
-  headline: "",
-};
-
-const submitForm = (values, { setSubmitting, resetForm }) => {
-  setTimeout(() => {
-    console.log("Submiting", values);
-    setSubmitting(false);
-    resetForm();
-  }, 1500);
-};
-
-const formSchema = object({
-  starRating: number().min(1, "Please select a star rating").required(),
-  writtenReview: string()
-    .min(15, "Written review must be at least 15 characters")
-    .required("Please enter your written review"),
-  headline: string()
-    .min(4, "Headline must be at least 4 characters")
-    .required("Please enter your headline"),
-});
+import { formInitialValues, submitForm, formSchema } from "../validation";
 
 const AddReview = ({ setWriteReviwBtnIsClicked }) => {
   return (
