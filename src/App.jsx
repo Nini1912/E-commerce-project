@@ -36,7 +36,9 @@ function App() {
       {!writeReviwBtnIsClicked && (
         <Review setWriteReviwBtnIsClicked={setWriteReviwBtnIsClicked} />
       )}
-      {writeReviwBtnIsClicked && <AddReview />}
+      {writeReviwBtnIsClicked && (
+        <AddReview setWriteReviwBtnIsClicked={setWriteReviwBtnIsClicked} />
+      )}
     </>
   );
 }

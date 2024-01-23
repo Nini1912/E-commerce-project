@@ -4,9 +4,6 @@ import User from "../assets/user-placeholder.png";
 import Star from "./star";
 
 const Review = ({ setWriteReviwBtnIsClicked }) => {
-  const newReview = () => {
-    setWriteReviwBtnIsClicked(true);
-  };
   return (
     <Container className="my-5 position-relative">
       <Row className="ms-5 ps-5">
@@ -16,7 +13,9 @@ const Review = ({ setWriteReviwBtnIsClicked }) => {
         <Col className="p-0">
           <button
             className="button px-5 py-3 border-0 rounded-4"
-            onClick={newReview}
+            onClick={() => {
+              setWriteReviwBtnIsClicked(true);
+            }}
           >
             Write a review
           </button>
@@ -30,10 +29,10 @@ const Review = ({ setWriteReviwBtnIsClicked }) => {
           Edit
         </button>
       </span>
-      {product.reviews.map((review) => {
+      {product.reviews.map((review, reviewIndex) => {
         return (
-          <>
-            <Row className="ms-5 ps-5 mt-5">
+          <Container key={reviewIndex} className="ms-5 mt-5">
+            <Row className="ms-5">
               <Col className="col-1 ms-5 pe-0">
                 <img src={User} alt="" />
               </Col>
@@ -42,19 +41,79 @@ const Review = ({ setWriteReviwBtnIsClicked }) => {
                 <span className="">
                   {review.starRating === 4 ? (
                     <>
-                      <Star fill="#FAD409" stroke="#FAD409" />
-                      <Star fill="#FAD409" stroke="#FAD409" />
-                      <Star fill="#FAD409" stroke="#FAD409" />
-                      <Star fill="#FAD409" stroke="#FAD409" />
-                      <Star fill="none" stroke="currentColor" />
+                      <Star
+                        fill="#FAD409"
+                        stroke="#FAD409"
+                        width={24}
+                        height={24}
+                        strokeWidth={2}
+                      />
+                      <Star
+                        fill="#FAD409"
+                        stroke="#FAD409"
+                        width={24}
+                        height={24}
+                        strokeWidth={2}
+                      />
+                      <Star
+                        fill="#FAD409"
+                        stroke="#FAD409"
+                        width={24}
+                        height={24}
+                        strokeWidth={2}
+                      />
+                      <Star
+                        fill="#FAD409"
+                        stroke="#FAD409"
+                        width={24}
+                        height={24}
+                        strokeWidth={2}
+                      />
+                      <Star
+                        fill="none"
+                        stroke="currentColor"
+                        width={24}
+                        height={24}
+                        strokeWidth={2}
+                      />
                     </>
                   ) : review.starRating === 5 ? (
                     <>
-                      <Star fill="#FAD409" stroke="#FAD409" />
-                      <Star fill="#FAD409" stroke="#FAD409" />
-                      <Star fill="#FAD409" stroke="#FAD409" />
-                      <Star fill="#FAD409" stroke="#FAD409" />
-                      <Star fill="#FAD409" stroke="#FAD409" />
+                      <Star
+                        fill="#FAD409"
+                        stroke="#FAD409"
+                        width={24}
+                        height={24}
+                        strokeWidth={2}
+                      />
+                      <Star
+                        fill="#FAD409"
+                        stroke="#FAD409"
+                        width={24}
+                        height={24}
+                        strokeWidth={2}
+                      />
+                      <Star
+                        fill="#FAD409"
+                        stroke="#FAD409"
+                        width={24}
+                        height={24}
+                        strokeWidth={2}
+                      />
+                      <Star
+                        fill="#FAD409"
+                        stroke="#FAD409"
+                        width={24}
+                        height={24}
+                        strokeWidth={2}
+                      />
+                      <Star
+                        fill="#FAD409"
+                        stroke="#FAD409"
+                        width={24}
+                        height={24}
+                        strokeWidth={2}
+                      />
                     </>
                   ) : null}
                 </span>
@@ -62,7 +121,7 @@ const Review = ({ setWriteReviwBtnIsClicked }) => {
                 <p className="text-secondary">{review.writtenReview}</p>
               </Col>
             </Row>
-          </>
+          </Container>
         );
       })}
     </Container>

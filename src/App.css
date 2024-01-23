@@ -190,3 +190,7 @@ body {
   color: white;
   font-weight: 500;
 }
+
+.submit-btn:disabled {
+  background-color: var(--btn-hover);
+}

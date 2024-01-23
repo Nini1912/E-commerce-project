@@ -1,13 +1,13 @@
-const Star = ({ fill, stroke }) => {
+const Star = ({ fill, stroke, width, height, strokeWidth }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width={width}
+      height={height}
       viewBox="0 0 24 24"
       fill={fill}
       stroke={stroke}
-      strokeWidth="2"
+      strokeWidth={strokeWidth}
       strokeLinecap="round"
       strokeLinejoin="round"
     >
