@@ -4,26 +4,26 @@ import Star from "./star";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { formSchema } from "../validation";
 
-const AddReview = ({
-  setWriteReviwBtnIsClicked,
+const EditReview = ({
   newReview,
   setNewReview,
-  writeReviwBtnIsClicked,
+  setReviewsVisible,
+  reviewsVisible,
 }) => {
   const submitForm = (values, { setSubmitting, resetForm }) => {
     setTimeout(() => {
       console.log("Submiting", values);
-      product.reviews.push(values);
+      product.reviews[3] = values;
       setNewReview(values);
       setSubmitting(false);
       resetForm();
-      setWriteReviwBtnIsClicked(false);
+      setReviewsVisible(!reviewsVisible);
     }, 1500);
   };
   return (
     <Container className="ms-5 ps-5 mb-5">
       <Row className="ms-5 ps-5">
-        <h2 className="ms-5 ps-4">Add a review</h2>
+        <h2 className="ms-5 ps-4">Edit your review</h2>
       </Row>
       <Formik
         initialValues={newReview}
@@ -197,7 +197,7 @@ const AddReview = ({
                       type="button"
                       className="cancel-btn border-0 py-3 px-4 rounded-4 me-4 mt-3"
                       onClick={() => {
-                        setWriteReviwBtnIsClicked(!writeReviwBtnIsClicked);
+                        setReviewsVisible(!reviewsVisible);
                       }}
                     >
                       Cancel
@@ -208,7 +208,7 @@ const AddReview = ({
                       disabled={formik.isSubmitting}
                     >
                       {/* {writeReviwBtnIsClicked ? "Submit" : "Save"} */}
-                      Submit
+                      Save
                     </button>
                   </div>
                 </Col>
@@ -221,4 +221,4 @@ const AddReview = ({
   );
 };
 
-export default AddReview;
+export default EditReview;

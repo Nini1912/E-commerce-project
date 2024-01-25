@@ -12,34 +12,16 @@ const ProductDescription = ({
       <h3 className="company-name">Sneaker Company</h3>
       <h1 className="product-category mb-4">Fall Limited Edition Sneakers</h1>
       <span className="star-span pt-2 px-3 pb-3">
-        <Star
-          fill="#FAD409"
-          stroke="#FAD409"
-          width={24}
-          height={24}
-          strokeWidth={2}
-        />
-        <Star
-          fill="#FAD409"
-          stroke="#FAD409"
-          width={24}
-          height={24}
-          strokeWidth={2}
-        />
-        <Star
-          fill="#FAD409"
-          stroke="#FAD409"
-          width={24}
-          height={24}
-          strokeWidth={2}
-        />
-        <Star
-          fill="#FAD409"
-          stroke="#FAD409"
-          width={24}
-          height={24}
-          strokeWidth={2}
-        />
+        {[1, 2, 3, 4].map((number) => (
+          <Star
+            key={number}
+            fill="#FAD409"
+            stroke="#FAD409"
+            width={24}
+            height={24}
+            strokeWidth={2}
+          />
+        ))}
         <Star
           fill="none"
           stroke="currentColor"

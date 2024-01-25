@@ -1,4 +1,5 @@
 import { string, object, number } from "yup";
+import { loggedInUser } from "./data";
 
 export const formSchema = object({
   starRating: number().min(1, "Please select a star rating").required(),
@@ -11,16 +12,8 @@ export const formSchema = object({
 });
 
 export const formInitialValues = {
-  user: "",
+  user: loggedInUser.name,
   starRating: 0,
   writtenReview: "",
   headline: "",
-};
-
-export const submitForm = (values, { setSubmitting, resetForm }) => {
-  setTimeout(() => {
-    console.log("Submiting", values);
-    setSubmitting(false);
-    resetForm();
-  }, 1500);
 };
