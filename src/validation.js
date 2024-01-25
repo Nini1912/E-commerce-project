@@ -17,3 +17,11 @@ export const formInitialValues = {
   writtenReview: "",
   headline: "",
 };
+
+export const submitForm = (values, { setSubmitting, resetForm }) => {
+  setTimeout(() => {
+    console.log("Submiting", values);
+    setSubmitting(false);
+    resetForm();
+  }, 1500);
+};

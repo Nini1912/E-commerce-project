@@ -207,6 +207,7 @@ const AddReview = ({
                       className="button submit-btn border-0 py-3 px-4 rounded-4 mt-3"
                       disabled={formik.isSubmitting}
                     >
+                      {/* {writeReviwBtnIsClicked ? "Submit" : "Save"} */}
                       Submit
                     </button>
                   </div>
