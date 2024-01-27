@@ -21,9 +21,9 @@ const AddReview = ({
     }, 1500);
   };
   return (
-    <Container className="ms-5 ps-5 mb-5">
-      <Row className="ms-5 ps-5">
-        <h2 className="ms-5 ps-4">Add a review</h2>
+    <Container className="ms-md-5 ps-md-5 mb-md-5 mt-3">
+      <Row className="ms-md-5 ps-md-5">
+        <h2 className="ms-md-5 ps-md-4 fs-4 fw-bold mb-0">Add a review</h2>
       </Row>
       <Formik
         initialValues={newReview}
@@ -33,9 +33,12 @@ const AddReview = ({
         {(formik) => {
           return (
             <Form>
-              <Row className="ms-5 ps-5 mt-3">
-                <Col className="ms-5 ps-4 d-flex flex-column">
-                  <label htmlFor="starRating" className="fs-5 fw-semibold mb-2">
+              <Row className="ms-md-5 ps-md-5 mt-3">
+                <Col className="ms-md-5 ps-md-4 d-flex flex-column">
+                  <label
+                    htmlFor="starRating"
+                    className="fs-md-5 fs-6 fw-semibold mb-2"
+                  >
                     Overall Rating
                   </label>
                   <div>
@@ -142,11 +145,11 @@ const AddReview = ({
                   />
                 </Col>
               </Row>
-              <Row className="ms-5 ps-5">
-                <Col className="ms-5 ps-4 d-flex flex-column">
+              <Row className="ms-md-5 ps-md-5">
+                <Col className="ms-md-5 ps-md-4 d-flex flex-column">
                   <label
                     htmlFor="headline"
-                    className="fs-5 fw-semibold mt-2 mb-3"
+                    className="fs-md-5 fs-6 fw-semibold mt-2 mb-3"
                   >
                     Headline
                   </label>
@@ -154,7 +157,7 @@ const AddReview = ({
                     name="headline"
                     type="text"
                     id="headline"
-                    className="border border-secondary-subtle border-2 rounded-3 w-50 p-2"
+                    className="input border border-secondary-subtle border-2 rounded-3 p-2"
                     style={{ fontFamily: "Kumbh Sans" }}
                     placeholder="What’s most important to know?"
                   />
@@ -165,11 +168,11 @@ const AddReview = ({
                   />
                 </Col>
               </Row>
-              <Row className="ms-5 ps-5">
-                <Col className="ms-5 ps-4 d-flex flex-column">
+              <Row className="ms-md-5 ps-md-5">
+                <Col className="ms-md-5 ps-md-4 d-flex flex-column">
                   <label
                     htmlFor="writtenReview"
-                    className="fs-5 fw-semibold mt-3 mb-3"
+                    className="fs-md-5 fs-6 fw-semibold mt-md-3 mb-3"
                   >
                     Written review
                   </label>
@@ -179,7 +182,7 @@ const AddReview = ({
                     rows={5}
                     cols={10}
                     id="writtenReview"
-                    className="border border-secondary-subtle border-2 rounded-3 p-2"
+                    className="input border border-secondary-subtle border-2 rounded-3 p-2"
                     style={{ fontFamily: "Kumbh Sans" }}
                     placeholder="What did you like or dislike? What did you use this product for?"
                   />
@@ -192,7 +195,7 @@ const AddReview = ({
               </Row>
               <Row className="ms-5 ps-3">
                 <Col>
-                  <div className="d-flex justify-content-end w-50 ms-5">
+                  <div className="d-flex justify-content-end w-md-50 ms-5">
                     <button
                       type="button"
                       className="cancel-btn border-0 py-3 px-4 rounded-4 me-4 mt-3"
@@ -207,7 +210,6 @@ const AddReview = ({
                       className="button submit-btn border-0 py-3 px-4 rounded-4 mt-3"
                       disabled={formik.isSubmitting}
                     >
-                      {/* {writeReviwBtnIsClicked ? "Submit" : "Save"} */}
                       Submit
                     </button>
                   </div>

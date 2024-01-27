@@ -8,7 +8,7 @@ const ProductDescription = ({
   setProductNumber,
 }) => {
   return (
-    <Col className="col-4 pt-5">
+    <Col className="col-md-5 pt-5">
       <h3 className="company-name">Sneaker Company</h3>
       <h1 className="product-category mb-4">Fall Limited Edition Sneakers</h1>
       <span className="star-span pt-2 px-3 pb-3">
@@ -38,7 +38,7 @@ const ProductDescription = ({
       </p>
       <div className="price-div mt-4">
         <h3 className="fw-bold me-3">$125.00</h3>
-        <p className="fw-bold px-2 mt-2 rounded">50%</p>
+        <p className="fw-bold px-2 mt-md-2 rounded">50%</p>
       </div>
       <p className="old-price text-decoration-line-through">$250.00</p>
       <Counter

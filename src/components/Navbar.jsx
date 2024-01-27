@@ -15,12 +15,18 @@ const NavBar = ({
     setCartIsClicked(!cartIsClicked);
   };
   return (
-    <Navbar expand="lg">
-      <Container className="border-bottom pt-3 pb-4 w-75">
-        <Navbar.Brand href="#home" className="me-5">
+    <Navbar expand="lg" className="position-relative navbar-div">
+      <Container className="border-bottom pt-3 pb-4 w-75 mx-0">
+        <Navbar.Brand
+          href="#home"
+          className="me-md-5 ms-md-0 ps-md-0 ms-5 ps-3"
+        >
           <img src={Logo} alt="" />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          className="position-absolute mt-2 top-1 start-1"
+        />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#collections" className="nav-link me-3">
@@ -40,7 +46,7 @@ const NavBar = ({
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
-        <div className="cart me-5">
+        <div className="cart me-md-5">
           <img className="cart-icon" src={Cart} alt="" onClick={openCart} />
           <CartContainer
             productsInCart={productsInCart}

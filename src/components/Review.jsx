@@ -14,23 +14,24 @@ const Review = ({ setWriteReviwBtnIsClicked, newReview, setNewReview }) => {
   };
 
   return reviewsVisible ? (
-    <Container className="my-5 position-relative">
-      <Row className="ms-5 ps-5">
-        <Col className="col-8 pe-0">
-          <h1 className="ms-5">Customers reviews</h1>
+    <Container className="my-md-5 position-relative">
+      <Row className="ms-md-5 ps-md-5 ms-1">
+        <Col className="col-md-8 col-8 pe-md-0">
+          <h1 className="ms-md-5 fs-3 fw-bold">Customer reviews</h1>
         </Col>
-        <Col className="p-0">
+        <Col className="p-md-0">
           <button
-            className="button px-5 py-3 border-0 rounded-4"
+            className="button px-md-5 py-md-3 border-0 rounded-md-4 rounded-3 px-4 py-2"
             onClick={() => {
               setWriteReviwBtnIsClicked(true);
             }}
           >
-            Write a review
+            <span className="write-review">Write a review</span>
+            <span className="add-review">Add</span>
           </button>
         </Col>
       </Row>
-      <span className="position-absolute start-50 ms-3 ps-5">
+      <span className="position-absolute start-50 ms-3 ps-5 mt-3">
         <button
           type="button"
           className="text-decoration-underline border-0 bg-white"
@@ -48,13 +49,13 @@ const Review = ({ setWriteReviwBtnIsClicked, newReview, setNewReview }) => {
       </span>
       {product.reviews.map((review, reviewIndex) => {
         return (
-          <Container key={reviewIndex} className="ms-5 mt-5">
-            <Row className="ms-5">
-              <Col className="col-1 ms-5 pe-0">
+          <Container key={reviewIndex} className="ms-md-5 mt-md-5 mt-4">
+            <Row className="ms-md-5">
+              <Col className="col-md-1 col-12 ms-md-5 pe-0">
                 <img src={User} alt="" />
               </Col>
-              <Col className="col-6 ps-0">
-                <h6>{review.user}</h6>
+              <Col className="col-6 ps-md-0">
+                <h6 className="mt-md-0 mt-2">{review.user}</h6>
                 <span>
                   <Star
                     fill={review.starRating >= 1 ? "#FAD409" : "none"}
@@ -95,7 +96,9 @@ const Review = ({ setWriteReviwBtnIsClicked, newReview, setNewReview }) => {
                   />
                 </span>
                 <p className="my-2 fw-bold">{review.headline}</p>
-                <p className="text-secondary">{review.writtenReview}</p>
+                <p className="text-secondary written-review">
+                  {review.writtenReview}
+                </p>
               </Col>
             </Row>
           </Container>

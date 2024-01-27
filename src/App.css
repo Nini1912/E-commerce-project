@@ -17,6 +17,10 @@ body {
   font-family: "Kumbh Sans", sans-serif;
 }
 
+.navbar-div {
+  margin-left: 20rem;
+}
+
 .profile-img {
   border-radius: 50%;
   width: 3.6rem;
@@ -193,4 +197,98 @@ body {
 
 .submit-btn:disabled {
   background-color: var(--btn-hover);
+}
+
+.thumnails {
+  display: block;
+}
+
+.next-arrow {
+  display: none;
+}
+
+.previous-arrow {
+  display: none;
+}
+
+.write-review {
+  display: block;
+}
+
+.add-review {
+  display: none;
+}
+
+.input {
+  width: 34rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .written-review {
+    width: 20rem;
+  }
+  .product-category {
+    font-size: 2rem;
+  }
+  .old-price {
+    position: absolute;
+    right: 2.5rem;
+    top: 52.5rem;
+    font-size: large;
+  }
+  .count {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+  .add-to-cart-btn {
+    padding: 1rem 5.3rem;
+    margin-left: 0.8rem;
+  }
+  .profile-img {
+    width: 2.5rem;
+    margin-right: 1rem;
+  }
+  .navbar-div {
+    width: 500px;
+    margin-left: 0.5rem;
+  }
+  .cart-product-div {
+    left: -16rem;
+  }
+  .product-img {
+    width: 22rem;
+  }
+  .thumnails {
+    display: none;
+    position: relative;
+  }
+  .next-arrow {
+    display: block;
+    position: absolute;
+    bottom: 20rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    padding-left: 0.6rem;
+    padding-top: 0.1rem;
+  }
+  .previous-arrow {
+    display: block;
+    position: absolute;
+    bottom: 19.7rem;
+    left: 1rem;
+    width: 2rem;
+    height: 2rem;
+    padding-left: 0.4rem;
+    padding-top: 0.1rem;
+  }
+  .write-review {
+    display: none;
+  }
+  .add-review {
+    display: block;
+  }
+  .input {
+    width: 20rem;
+  }
 }
