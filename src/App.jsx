@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Row, Container } from "react-bootstrap";
 import NavBar from "./components/Navbar";
 import ImageCarrousel from "./components/ImgCarrousel";
-import ProductDescription from "./components/productDescription";
+import ProductDescription from "./components/ProductDescription";
 import Review from "./components/Review";
 import ReviewForm from "./components/ReviewForm";
 import { useState } from "react";
