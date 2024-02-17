@@ -5,28 +5,22 @@ import NavBar from "./components/Navbar";
 import ImageCarrousel from "./components/ImgCarrousel";
 import ProductDescription from "./components/productDescription";
 import Review from "./components/Review";
-import AddReview from "./components/AddReview";
+import ReviewForm from "./components/ReviewForm";
 import { useState } from "react";
-import { loggedInUser } from "./data";
+import { product } from "./data";
 
 function App() {
   const [productsInCart, setProductsInCart] = useState(0);
-  const [cartIsClicked, setCartIsClicked] = useState(false);
   const [productNumber, setProductNumber] = useState(0);
-  const [writeReviwBtnIsClicked, setWriteReviwBtnIsClicked] = useState(false);
-  const [newReview, setNewReview] = useState({
-    user: loggedInUser.name,
-    starRating: 0,
-    writtenReview: "",
-    headline: "",
-  });
+  const [addReviewFormVisible, setAddReviewFormVisible] = useState(false);
+  const [reviews, setReviews] = useState(product.reviews);
+  const [reviewToEdit, setReviewToEdit] = useState(null);
+
   return (
     <>
       <NavBar
         productsInCart={productsInCart}
         setProductsInCart={setProductsInCart}
-        cartIsClicked={cartIsClicked}
-        setCartIsClicked={setCartIsClicked}
         setProductNumber={setProductNumber}
       />
       <Container className="product-div mt-5">
@@ -39,19 +33,21 @@ function App() {
           />
         </Row>
       </Container>
-      {!writeReviwBtnIsClicked && (
+      {!addReviewFormVisible && (
         <Review
-          setWriteReviwBtnIsClicked={setWriteReviwBtnIsClicked}
-          newReview={newReview}
-          setNewReview={setNewReview}
+          setAddReviewFormVisible={setAddReviewFormVisible}
+          reviews={reviews}
+          setReviews={setReviews}
+          setReviewToEdit={setReviewToEdit}
         />
       )}
-      {writeReviwBtnIsClicked && (
-        <AddReview
-          setWriteReviwBtnIsClicked={setWriteReviwBtnIsClicked}
-          newReview={newReview}
-          setNewReview={setNewReview}
-          writeReviwBtnIsClicked={writeReviwBtnIsClicked}
+      {addReviewFormVisible && (
+        <ReviewForm
+          setAddReviewFormVisible={setAddReviewFormVisible}
+          reviewToEdit={reviewToEdit}
+          setReviewToEdit={setReviewToEdit}
+          setReviews={setReviews}
+          reviews={reviews}
         />
       )}
     </>

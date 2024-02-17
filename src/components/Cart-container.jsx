@@ -4,8 +4,8 @@ import { assetsBaseUrl, product } from "../data";
 
 const CartContainer = ({
   productsInCart,
-  cartIsClicked,
-  setCartIsClicked,
+  cartVisible,
+  setCartVisible,
   setProductsInCart,
   setProductNumber,
 }) => {
@@ -20,11 +20,10 @@ const CartContainer = ({
           {productsInCart}
         </span>
       )}
-      {cartIsClicked && (
+      {cartVisible && (
         <div className="cart-product-div rounded">
           <h5
             className="fw-bolder w-100 mt-3 ps-4 pb-3 border-bottom"
-            style={{ fontFamily: "Kumbh Sans" }}
           >
             Cart
           </h5>
@@ -47,7 +46,7 @@ const CartContainer = ({
                   <p className="mb-1">Fall Limited Edition Sneakers</p>
                   <span>$125.00 x {productsInCart} </span>
                   <span className="fw-bold" style={{ color: "#272727" }}>
-                    ${125 * productsInCart}.00
+                    ${(125 * productsInCart).toFixed(2)}
                   </span>
                 </Col>
                 <Col className="col-1 p-0">
@@ -62,7 +61,7 @@ const CartContainer = ({
               <button
                 className="checkout-btn button w-100 px-5 py-3 border-0 rounded-4 mt-4"
                 onClick={() => {
-                  setCartIsClicked(false);
+                  setCartVisible(false);
                 }}
               >
                 Chekout

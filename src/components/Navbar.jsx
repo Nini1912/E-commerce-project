@@ -1,18 +1,14 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
+import { useState } from "react";
 import Logo from "../assets/logo.svg";
 import Cart from "../assets/icon-cart.svg";
 import CartContainer from "./Cart-container";
 import { loggedInUser, assetsBaseUrl } from "../data";
 
-const NavBar = ({
-  productsInCart,
-  setCartIsClicked,
-  cartIsClicked,
-  setProductsInCart,
-  setProductNumber,
-}) => {
+const NavBar = ({ productsInCart, setProductsInCart, setProductNumber }) => {
+  const [cartVisible, setCartVisible] = useState(false);
   const openCart = () => {
-    setCartIsClicked(!cartIsClicked);
+    setCartVisible(!cartVisible);
   };
   return (
     <Navbar expand="lg" className="position-relative navbar-div">
@@ -47,11 +43,13 @@ const NavBar = ({
           </Nav>
         </Navbar.Collapse>
         <div className="cart me-md-5">
-          <img className="cart-icon" src={Cart} alt="" onClick={openCart} />
+          <button className="border-0 bg-white" onClick={openCart}>
+            <img className="cart-icon" src={Cart} alt="" />
+          </button>
           <CartContainer
             productsInCart={productsInCart}
-            cartIsClicked={cartIsClicked}
-            setCartIsClicked={setCartIsClicked}
+            cartVisible={cartVisible}
+            setCartVisible={setCartVisible}
             setProductsInCart={setProductsInCart}
             setProductNumber={setProductNumber}
           />

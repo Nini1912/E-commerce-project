@@ -7,28 +7,21 @@ const ProductDescription = ({
   productNumber,
   setProductNumber,
 }) => {
+  const starRating = 4;
   return (
     <Col className="col-md-5 pt-5">
       <h3 className="company-name">Sneaker Company</h3>
       <h1 className="product-category mb-4">Fall Limited Edition Sneakers</h1>
       <span className="star-span pt-2 px-3 pb-3">
-        {[1, 2, 3, 4].map((number) => (
+        {[1, 2, 3, 4, 5].map((number) => (
           <Star
             key={number}
-            fill="#FAD409"
-            stroke="#FAD409"
             width={24}
             height={24}
             strokeWidth={2}
+            isFilled={number <= starRating}
           />
         ))}
-        <Star
-          fill="none"
-          stroke="currentColor"
-          width={24}
-          height={24}
-          strokeWidth={2}
-        />
       </span>
       <span className="rate-span pt-2 pe-3 pb-3">4.2 out of 5</span>
       <p className="product-description mt-4">

@@ -1,12 +1,12 @@
-const Star = ({ fill, stroke, width, height, strokeWidth }) => {
+const Star = ({ isFilled, width, height, strokeWidth }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width={width}
       height={height}
       viewBox="0 0 24 24"
-      fill={fill}
-      stroke={stroke}
+      fill={isFilled ? "#FAD409" : "none"}
+      stroke={isFilled ? "#FAD409" : "currentColor"}
       strokeWidth={strokeWidth}
       strokeLinecap="round"
       strokeLinejoin="round"
